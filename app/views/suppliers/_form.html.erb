@@ -1,0 +1,57 @@
+<%= form_with(model: supplier, local: true) do |form| %>
+  <% if supplier.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(supplier.errors.count, "error") %> prohibited this supplier from being saved:</h2>
+
+      <ul>
+        <% supplier.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :suppliername, "Supplier Name" %>
+    <%= form.text_field :suppliername, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :primarycontact, "Primary Contact" %>
+    <%= form.text_field :primarycontact, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :address, "Address" %>
+    <%= form.text_area :address, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :contactno, "Contact Number" %>
+    <%= form.text_field :contactno, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :email, "Email" %>
+    <%= form.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :gstno, "GST NO" %>
+    <%= form.text_field :gstno, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :dlno20b, "DLNO20B" %>
+    <%= form.text_field :dlno20b, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :dlno21b, "DLNO21B" %>
+    <%= form.text_field :dlno21b, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'save supplier', class: 'btn btn-primary btn-block' %>
+  </div>
+<% end %>

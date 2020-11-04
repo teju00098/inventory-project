@@ -1,0 +1,24 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+@import "bourbon";
+
+.table-wrapper{
+    overflow-y: scroll;
+    height: 550px;
+  
+    table {
+      border-collapse: collapse;
+      width: 100%;
+  
+      th{
+        position: sticky;
+        top: 0;
+        background: #fff;
+      }
+  
+      td,th{
+        padding: 10px;
+        text-align: center;
+      }
+    }
+  }
